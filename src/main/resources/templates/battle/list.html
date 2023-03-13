@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Battles</title>
+</head>
+<body>
+<table>
+  <thead>
+  <tr>
+    <th th:text="#{player.name}" />
+    <th th:text="#{player.score}" />
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="battle : ${battles}">
+    <td th:text="${battle.player.getName()}"/>
+    <td th:text="${battle.player.getScore()}"/>
+  </tr>
+  </tbody>
+</table>
+<a href="/app/movies/create" th:text="#{action.new}" />
+</body>
+</html>
+
+
+
+
+
+

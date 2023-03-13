@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Wasted</title>
+    <style>
+        body {
+            background-color: #1d1d1d;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .button {
+            background-color: #e60000;
+            color: white;
+            padding: 15px 32px;
+            border: none;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #b30000;
+        }
+
+        .logo {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="wrapper">
+        <img class="logo" th:src="@{/battles/wasted.jpeg}">
+        <div class="buttons">
+            <a class="button" th:href="@{/app/battles/create}" th:text="#{action.try-again}"></a>
+            <a class="button" th:href="@{/app/players/list/ordered}" th:text="#{action.scores}"></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie</title>
+</head>
+<body>
+  <form action="#" th:action="@{/app/movies}" th:object="${movie}" method="post">
+      <label th:text="#{movie.title}" />
+      <input type="text" th:field="*{title}" /><br />
+      <label th:text="#{movie.genre}" />
+      <input type="text" th:field="*{genre}" /><br />
+      <label th:text="#{movie.ratings}" />
+      <input type="number" maxlength="3" step="0.1" min="0" max="10" th:field="*{ratings}" /><br />
+      <label th:text="#{movie.image}" />
+      <input type="text" th:field="*{image}"><br />
+      <input type="hidden" th:field="*{id}" />
+      <input type="submit" th:value="#{action.save}" />
+  </form>
+</body>
+</html>

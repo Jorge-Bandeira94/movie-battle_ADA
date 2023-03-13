@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>List of players ordered by score</title>
+</head>
+<body>
+<h1>List of players ordered by score</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Score</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="player : ${players}">
+    <td th:text="${player.getName()}"/>
+    <td th:text="${player.getScore()}"/>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
